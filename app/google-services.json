@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "714114505883",
+    "firebase_url": "https://tamagochi-b7756.firebaseio.com",
+    "project_id": "tamagochi-b7756",
+    "storage_bucket": "tamagochi-b7756.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714114505883:android:fbddf53e1ba58a70",
+        "android_client_info": {
+          "package_name": "com.example.didact.tamagochipet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "714114505883-34q8e9gruf34669ps68fcli7sd9ge89j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.didact.tamagochipet",
+            "certificate_hash": "6c660decc0c483669e5a63668db1d41de7895f5e"
+          }
+        },
+        {
+          "client_id": "714114505883-5q6s091ba21h64252tkkls0rrehjjdp6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBS4EltNuyFWwOWIUAfw9L95p6fubFh4wc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "714114505883-5q6s091ba21h64252tkkls0rrehjjdp6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.didact.tamagochipet.CamaraActivity"
+    android:background="@drawable/pan">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/botoncapturarfoto"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/tamagocgibotonrojo" />
+
+        <ImageView
+            android:id="@+id/imagencamara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/botoncapturarfoto"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="185dp"
+            app:srcCompat="@drawable/guinea" />
+
+    </RelativeLayout>
+
+</LinearLayout>
