@@ -1,3 +1,5 @@
+package com.example.didact.tamagochipet;
+
 import android.os.Parcel;
 import android.os.Parcelable;
 

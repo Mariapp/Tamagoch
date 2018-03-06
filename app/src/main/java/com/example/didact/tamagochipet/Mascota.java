@@ -1,3 +1,5 @@
+package com.example.didact.tamagochipet;
+
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -10,14 +12,14 @@ public class Mascota implements Parcelable {
     String nombre;
     int peso;
     String raza;
-    int cp;
+    int CP;
 
 
-    public Mascota(String nombre, int peso, String password, int cp) {
+    public Mascota(String nombre, int peso, String raza, int CP) {
         this.nombre = nombre;
         this.raza = raza;
         this.peso = peso;
-        this.cp = cp;
+        this.CP = CP;
     }
 
     public static final Creator <Mascota> CREATOR = new Creator <Mascota>() {
@@ -66,12 +68,12 @@ public class Mascota implements Parcelable {
         this.raza = raza;
     }
 
-    public int getCp() {
-        return cp;
+    public int getCP() {
+        return CP;
     }
 
-    public void setCp(int cp) {
-        this.cp = cp;
+    public void setCP(int CP) {
+        this.CP = CP;
     }
 
     public static Creator <Mascota> getCREATOR() {
@@ -88,7 +90,7 @@ public class Mascota implements Parcelable {
 
         parcel.writeString(this.nombre);
         parcel.writeString(this.raza);
-        parcel.writeInt(this.cp);
+        parcel.writeInt(this.CP);
         parcel.writeInt(this.peso);
 
     }
@@ -98,7 +100,7 @@ public class Mascota implements Parcelable {
         this.nombre = p.readString();
         this.raza = p.readString();
         this.peso = p.readInt();
-        this.cp = p.readInt();
+        this.CP = p.readInt();
 
 
 

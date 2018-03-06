@@ -26,6 +26,11 @@
 
     </LinearLayout>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -72,25 +77,83 @@
         android:layout_height="100dp"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/tamagocgiboton" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/tamagocgiboton" />
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="29dp"
+                android:layout_marginStart="29dp"
+                android:layout_toEndOf="@+id/imageView7"
+                android:layout_toRightOf="@+id/imageView7"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/tamagocgiboton" />
 
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/tamagocgiboton" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/imageView7"
+                android:layout_marginLeft="52dp"
+                android:layout_marginStart="52dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/tamagocgiboton" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignTop="@+id/imageView5"
+                android:layout_marginLeft="46dp"
+                android:layout_marginStart="46dp"
+                android:layout_toEndOf="@+id/imageView3"
+                android:layout_toRightOf="@+id/imageView3"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/tamagocgiboton" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/imageView3"
+                android:layout_alignStart="@+id/imageView3"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="19dp"
+                android:layout_marginStart="19dp"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView10"
+                android:layout_alignEnd="@+id/imageView7"
+                android:layout_alignRight="@+id/imageView7"
+                android:layout_alignTop="@+id/imageView10"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                app:srcCompat="@drawable/settings" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView11"
+                android:layout_alignEnd="@+id/imageView5"
+                android:layout_alignRight="@+id/imageView5"
+                android:layout_alignTop="@+id/imageView11"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+        </RelativeLayout>
+
     </LinearLayout>
 </LinearLayout>
