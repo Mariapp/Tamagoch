@@ -20,7 +20,8 @@
         <activity android:name=".RegistroUsuarioActivity" />
         <activity android:name=".MenuPrincipal" />
         <activity android:name=".ConfiguracionMAscotas" />
-        <activity android:name=".CamaraActivity"></activity>
+        <activity android:name=".CamaraActivity" />
+        <activity android:name=".AlarmasActivity"></activity>
     </application>
 
 </manifest>
