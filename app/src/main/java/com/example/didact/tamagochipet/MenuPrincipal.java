@@ -20,6 +20,11 @@ public class MenuPrincipal extends AppCompatActivity {
 
 
     }
+    public void conectividad (View view){
+
+        Intent i=new Intent(getApplicationContext(),ConectividadActivity.class);
+        startActivity(i);
+    }
 
 
     public void camara (View view){

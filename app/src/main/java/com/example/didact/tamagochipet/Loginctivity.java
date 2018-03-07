@@ -44,51 +44,7 @@ public class Loginctivity extends AppCompatActivity {
 
 
 
-   /* public void logear (View view) {
 
-        String idusuario = edusuario.getText().toString();
-        String idpassword = edpassword.getText().toString();
-
-        if (edusuario.equals("") || edpassword.equals("")) {
-            Toast.makeText(getApplicationContext(), "Rellena todos los campos", Toast.LENGTH_LONG).show();
-        } else {
-
-            String idusuario = edusuario.getText().toString();
-            String idpassword = edpassword.getText().toString();
-
-
-            dbRef = FirebaseDatabase.getInstance().getReference()
-                    .child("Usuario/" + idusuario + idpassword);
-
-            valueEventListener = new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-
-                    Usuario usu = dataSnapshot.getValue(Usuario.class);
-
-                    Intent i = null;
-                    if (usu != null) {
-                        Toast.makeText(getApplicationContext(), "Rellena todos los campos", Toast.LENGTH_LONG).show();
-                    } else {
-                        i = new Intent(getApplicationContext(), MenuPrincipal.class);
-                        startActivity(i);
-                    }
-
-
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-                    Log.e("Loginctivity", "Database ERROR");
-
-                }
-            };
-
-            dbRef.addValueEventListener(valueEventListener);
-
-
-        }
-    }*/
 
     public void logear (View view){
 
@@ -107,18 +63,24 @@ public class Loginctivity extends AppCompatActivity {
                         "password "+usu.getPassword(),
                         Toast.LENGTH_LONG).show();
 
-                if(usu!=null){
+                if (dataSnapshot.getValue()==null) {
+                    Toast.makeText(getApplicationContext(), "Usuario incorrecto", Toast.LENGTH_LONG).show();
+                }else{
 
-                    if(usu.getPassword().equals(idpassword)){
-                        //el intent
+                    String contraseñaobtenida=usu.getPassword();
+
+
+                    if(idpassword.equals(contraseñaobtenida)){
+
+                        Intent menuintent=new Intent().setClass(getApplicationContext(), MenuPrincipal.class);
+                        startActivity(menuintent);
+                        finish();
                     }else{
                         Toast.makeText(getApplicationContext(), "La contraseña es erronea",
                                 Toast.LENGTH_LONG).show();
                     }
-                }else{
-                    Toast.makeText(getApplicationContext(), "No existe el usuario",
-                            Toast.LENGTH_LONG).show();
-                }
+
+            }
             }
 
             @Override

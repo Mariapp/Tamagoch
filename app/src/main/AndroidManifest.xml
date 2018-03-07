@@ -21,7 +21,8 @@
         <activity android:name=".MenuPrincipal" />
         <activity android:name=".ConfiguracionMAscotas" />
         <activity android:name=".CamaraActivity" />
-        <activity android:name=".AlarmasActivity"></activity>
+        <activity android:name=".AlarmasActivity" />
+        <activity android:name=".ConectividadActivity"></activity>
     </application>
 
 </manifest>
