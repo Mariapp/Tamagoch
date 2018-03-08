@@ -1,62 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="100dp">
 
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="#04B45F"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:background="#04B45F">
 
-        <LinearLayout
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="20dp">
+        <TextView
+            android:id="@+id/imtvnombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/imtvraza"
+            android:layout_alignBottom="@+id/imtvraza"
+            android:layout_alignLeft="@+id/imtvcp"
+            android:layout_alignStart="@+id/imtvcp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginStart="34dp"
+            android:text="TextView" />
 
-            <TextView
-                android:id="@+id/tvnombre"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+        <TextView
+            android:id="@+id/imtvtipo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/imtvcp"
+            android:layout_alignBottom="@+id/imtvcp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/imtvcp"
+            android:layout_toRightOf="@+id/imtvcp"
+            android:text="TextView" />
 
-            <TextView
-                android:id="@+id/tvpeso"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/imtvcp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginStart="36dp"
+            android:layout_toEndOf="@+id/imgitemavatar"
+            android:layout_toRightOf="@+id/imgitemavatar"
+            android:text="TextView" />
 
-        <LinearLayout
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="20dp">
-
-            <TextView
-                android:id="@+id/tvraza"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/tvcp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/imtvraza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imgitemavatar"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_toEndOf="@+id/imtvtipo"
+            android:layout_toRightOf="@+id/imtvtipo"
+            android:text="TextView" />
 
         <ImageView
             android:id="@+id/imgitemavatar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="38dp"
+            android:layout_marginStart="38dp"
             app:srcCompat="@drawable/guinea" />
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
 

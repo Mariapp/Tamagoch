@@ -14,12 +14,14 @@ import android.os.Parcelable;
         String raza;
         String CP;
         String imagen;
+        String tipo;
 
-    public Mascota(String nombre, String raza, String CP, String imagen) {
+    public Mascota(String nombre, String raza, String CP, String imagen, String tipo) {
         this.nombre = nombre;
         this.raza = raza;
         this.CP = CP;
         this.imagen = imagen;
+        this.tipo=tipo;
     }
 
     public Mascota() {
@@ -30,6 +32,7 @@ import android.os.Parcelable;
         raza = in.readString();
         CP = in.readString();
         imagen = in.readString();
+        tipo=in.readString();
 
     }
 
@@ -78,6 +81,14 @@ import android.os.Parcelable;
         this.imagen = imagen;
     }
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -89,6 +100,7 @@ import android.os.Parcelable;
         parcel.writeString(this.raza);
         parcel.writeString(this.imagen);
         parcel.writeString(this.CP);
+        parcel.writeString(this.tipo);
 
     }
     private void readFromParcel(Parcel p) {
@@ -97,6 +109,7 @@ import android.os.Parcelable;
         this.raza = p.readString();
         this.CP = p.readString();
         this.imagen = p.readString();
+        this.tipo=p.readString();
 
     }
 
