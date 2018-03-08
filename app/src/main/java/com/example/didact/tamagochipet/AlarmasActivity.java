@@ -63,7 +63,7 @@ public class AlarmasActivity extends AppCompatActivity {
         if(cajacomer.equals("")|| cajajugar.equals("")){
             Toast.makeText(getApplicationContext(), "Por favor, rellena los datos",
                     Toast.LENGTH_LONG).show();
-            if(checksi.isChecked()){
+
 
 
 
@@ -74,6 +74,7 @@ public class AlarmasActivity extends AppCompatActivity {
 
 
     }
+
     }
-}
+
 
