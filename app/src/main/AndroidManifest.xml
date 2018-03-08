@@ -9,22 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"/>
-
+        <activity android:name=".MainActivity" />
         <activity android:name=".Loginctivity" />
         <activity android:name=".RegistroUsuarioActivity" />
         <activity android:name=".MenuPrincipal">
-        <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
         <activity android:name=".ConfiguracionMAscotas" />
         <activity android:name=".CamaraActivity" />
         <activity android:name=".AlarmasActivity" />
-        <activity android:name=".ConectividadActivity"></activity>
+        <activity android:name=".ConectividadActivity" />
+        <activity android:name=".AlarmasActivity2"></activity>
     </application>
 
 </manifest>

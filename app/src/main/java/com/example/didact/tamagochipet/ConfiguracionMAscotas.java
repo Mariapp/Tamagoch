@@ -12,8 +12,7 @@ public class ConfiguracionMAscotas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracion_mascotas);
     }
-    public void alarma (View v){
-
+    public void alarma (View view){
         Intent i=new Intent(getApplicationContext(),AlarmasActivity.class);
         startActivity(i);
 

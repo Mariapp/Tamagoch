@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="100dp"
         android:layout_gravity="end"
         android:gravity="end"
         android:orientation="horizontal">
@@ -45,40 +45,66 @@
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:text="¿Cuántas veces al día come tu tamagochi?" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/etcomer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="date" />
+                android:inputType="date"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"/>
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:text="¿Cuántas veces al día quieres jugar con tu mascota?" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/etjugar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
                 android:inputType="date" />
 
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:textColor="@color/colorAccent"
+                android:textSize="15dp"
+                android:text="¿Tiene que tomar alguna medicina?" />
 
-            <EditText
-                android:id="@+id/editText3"
+            <CheckBox
+                android:id="@+id/checksi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="date" />
+                android:text="si"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorAccent"/>
+            <CheckBox
+                android:id="@+id/checkno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="no"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorAccent"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Siguiente"
+                android:onClick="siguiente"/>
+
+
         </LinearLayout>
 
     </LinearLayout>

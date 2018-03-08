@@ -15,6 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Loginctivity extends AppCompatActivity {
+    static final String EXTRA_USU="Usu";
 
     private DatabaseReference dbRef;
     private ValueEventListener valueEventListener;
@@ -73,6 +74,7 @@ public class Loginctivity extends AppCompatActivity {
                     if(idpassword.equals(contraseñaobtenida)){
 
                         Intent menuintent=new Intent().setClass(getApplicationContext(), MenuPrincipal.class);
+                        menuintent.putExtra(EXTRA_USU,"Usu");
                         startActivity(menuintent);
                         finish();
                     }else{
@@ -91,5 +93,7 @@ public class Loginctivity extends AppCompatActivity {
 
         dbRef.addValueEventListener(valueEventListener);
 }
+
+
 }
 
