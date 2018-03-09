@@ -17,4 +17,8 @@ public class ConfiguracionMAscotas extends AppCompatActivity {
         startActivity(i);
 
     }
+    public void misdatos (View view){
+        Intent i=new Intent(getApplicationContext(),MisDatosMAscotas.class);
+        startActivity(i);
+    }
 }

@@ -65,8 +65,6 @@ public class AlarmasActivity extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
 
 
-
-
         }else{
             Intent i=new Intent().setClass(getApplicationContext(), AlarmasActivity2.class);
             startActivity(i);

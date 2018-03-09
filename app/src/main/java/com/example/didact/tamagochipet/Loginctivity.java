@@ -1,5 +1,9 @@
 package com.example.didact.tamagochipet;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,13 +19,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Loginctivity extends AppCompatActivity {
-    static final String EXTRA_USU="Usu";
 
-    private DatabaseReference dbRef;
-    private ValueEventListener valueEventListener;
+
+
+    DatabaseReference dbRef;
+    ValueEventListener valueEventListener;
     EditText edusuario,edpassword;
 
-
+    static final String EXTRA_USU="Usu";
 
 
 
@@ -34,6 +39,13 @@ public class Loginctivity extends AppCompatActivity {
         edpassword=(EditText)findViewById(R.id.edpassword);
 
     }
+
+
+
+
+
+
+
     public void registrarusuario (View view){
 
         Intent i=new Intent(getApplicationContext(),RegistroUsuarioActivity.class);
@@ -58,7 +70,6 @@ public class Loginctivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 Usuario usu=dataSnapshot.getValue(Usuario.class);
-
                 Toast.makeText(getApplicationContext(), "nombre "+usu.getNombre()+"\n"+
                         "email "+usu.getEmail()+"\n"+
                         "password "+usu.getPassword(),
@@ -68,18 +79,20 @@ public class Loginctivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Usuario incorrecto", Toast.LENGTH_LONG).show();
                 }else{
 
+
                     String contraseñaobtenida=usu.getPassword();
 
 
-                    if(idpassword.equals(contraseñaobtenida)){
+                    if(!idpassword.equals(contraseñaobtenida)){
+                        Toast.makeText(getApplicationContext(), "La contraseña es erronea",
+                            Toast.LENGTH_LONG).show();
 
+
+                    }else{
                         Intent menuintent=new Intent().setClass(getApplicationContext(), MenuPrincipal.class);
                         menuintent.putExtra(EXTRA_USU,"Usu");
                         startActivity(menuintent);
                         finish();
-                    }else{
-                        Toast.makeText(getApplicationContext(), "La contraseña es erronea",
-                                Toast.LENGTH_LONG).show();
                     }
 
             }
@@ -87,6 +100,7 @@ public class Loginctivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
+                Log.e("LoginActivity", "DATABASE ERROR");
 
             }
         };
@@ -96,4 +110,7 @@ public class Loginctivity extends AppCompatActivity {
 
 
 }
+
+
+
 

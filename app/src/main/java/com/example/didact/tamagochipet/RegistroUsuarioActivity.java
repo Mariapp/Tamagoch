@@ -1,5 +1,9 @@
 package com.example.didact.tamagochipet;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,8 +41,8 @@ public class RegistroUsuarioActivity extends AppCompatActivity {
 
             if(nombre.equals("")||email.equals("")||password.equals("")){
                 Toast.makeText(getApplicationContext(),"Rellena todos los campos", Toast.LENGTH_LONG).show();
-            }else{
-                Usuario nuevoUsuario=new Usuario(nombre,email,password);
+            }else {
+                Usuario nuevoUsuario = new Usuario(nombre, email, password);
                 dbRef = FirebaseDatabase.getInstance().getReference()
                         .child("Usuario");
                 dbRef.child(nombre).setValue(nuevoUsuario, new DatabaseReference.CompletionListener() {
@@ -49,9 +53,9 @@ public class RegistroUsuarioActivity extends AppCompatActivity {
                             String nombre = ednuevousuario.getText().toString();
                             String password = ednuevapassword.getText().toString();
 
-                            Toast.makeText(getApplicationContext(), "Tu usuario y tu contraseña son: "+nombre+"\n"+password,
+                            Toast.makeText(getApplicationContext(), "Tu usuario y tu contraseña son: " + nombre + "\n" + password,
                                     Toast.LENGTH_LONG).show();
-                            Intent i=new Intent(getApplicationContext(),MenuPrincipal.class);
+                            Intent i = new Intent(getApplicationContext(), MenuPrincipal.class);
                             startActivity(i);
 
 
@@ -63,16 +67,10 @@ public class RegistroUsuarioActivity extends AppCompatActivity {
                     }
                 });
 
-            }
-        }
+            }}}
 
 
 
-
-
-
-
-    }
 
 
 
