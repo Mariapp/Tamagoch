@@ -14,6 +14,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.Serializable;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
 public class MenuPrincipal extends AppCompatActivity {
 
     DatabaseReference dbRef;
@@ -88,6 +93,15 @@ public class MenuPrincipal extends AppCompatActivity {
             }
         };
         dbRef.addValueEventListener(valueEventListener);*/
+    
+     private String obtenerFechaSistema(){
+
+        Calendar c= Calendar.getInstance();
+        Date fecha = c.getTime();
+        String fecha_string =
+                c.get(Calendar.YEAR)+""+(c.get(Calendar.MONTH)+1)+""+c.get(Calendar.DAY_OF_MONTH);
+        return fecha_string;
+    }
 
 
     }
