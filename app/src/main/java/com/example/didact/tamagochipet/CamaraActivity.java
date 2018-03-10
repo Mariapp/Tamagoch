@@ -118,8 +118,8 @@ public class CamaraActivity extends AppCompatActivity {
             }
         }
     }
-    public void alarma (View v){
-        Intent i=new Intent(getApplicationContext(), AlarmActivity.class);
+    public void guardar (View v){
+        Intent i=new Intent(getApplicationContext(), CamaraActivity.class);
                 startActivity(i);
     }
 }
