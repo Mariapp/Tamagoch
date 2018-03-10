@@ -35,6 +35,7 @@ public class MisDatosMAscotas extends AppCompatActivity{
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_mis_datos_mascotas);
+                
             datosUsuario();
 
 
@@ -44,7 +45,8 @@ public class MisDatosMAscotas extends AppCompatActivity{
 
             Bundle b= getIntent().getExtras();
 
-            if (b!=null){
+            if (r.getUsuario().equals(usu.getNombre())) {
+            listaRecetas.add(dataSnapshot.getValue(CReceta.class));
 
                 usu = b.getParcelable(Loginctivity.EXTRA_USU);
                 tvusuariomascotas.setText(usu.getNombre());
