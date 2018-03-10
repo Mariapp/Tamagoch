@@ -44,9 +44,10 @@ public class MisDatosMAscotas extends AppCompatActivity{
             tvusuariomascotas=(TextView)findViewById(R.id.tvusuariomascotas);
 
             Bundle b= getIntent().getExtras();
+                Mascota r =dataSnapshot.getValue(Mascota.class);
 
-            if (r.getUsuario().equals(usu.getNombre())) {
-            listaRecetas.add(dataSnapshot.getValue(CReceta.class));
+            if (r.getUDueño().equals(usu.getNombre())) {
+            listaMascpta.add(dataSnapshot.getValue(Mascota.class));
 
                 usu = b.getParcelable(Loginctivity.EXTRA_USU);
                 tvusuariomascotas.setText(usu.getNombre());
